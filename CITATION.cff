@@ -4,6 +4,7 @@ title: "eyelogic-recorder: asynchronous recording for EyeLogic eye trackers in P
 type: software
 version: 0.2.0
 date-released: "2026-10-21"
+doi: "10.5281/zenodo.23537087"
 license: MIT
 repository-code: "https://github.com/laubrock-lab/eyelogic-recorder"
 authors:

@@ -1,5 +1,7 @@
 # eyelogic-recorder
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23537087.svg)](https://doi.org/10.5281/zenodo.23537087)
+
 A lightweight Python client for [EyeLogic](https://www.eyelogicsolutions.com/)
 eye trackers, built on top of the official EyeLogic SDK. It adds what the SDK does not provide: asynchronous
 recording of every gaze sample to plain CSV, timestamped messages (for example
@@ -244,4 +246,7 @@ MIT, see [LICENSE](LICENSE).
 
 ## Citation
 
-See [CITATION.cff](CITATION.cff).
+Please cite the software via its DOI,
+https://doi.org/10.5281/zenodo.23537087, which resolves to the latest version
+(each version also has its own DOI on Zenodo). Details are in
+[CITATION.cff](CITATION.cff).
