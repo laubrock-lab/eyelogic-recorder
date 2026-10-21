@@ -10,7 +10,7 @@ sample file, typed exceptions, and context-manager cleanup. It works well with
 PsychoPy but does not require it. The only Python dependency is NumPy (plus the
 Windows-only EyeLogic SDK).
 
-![Moving-window demo: text outside seven characters around the gaze (red dot) is masked](docs/images/moving_window.png)
+![Moving-window demo: text outside seven characters around the gaze (red dot) is masked](https://raw.githubusercontent.com/laubrock-lab/eyelogic-recorder/main/docs/images/moving_window.png)
 
 *`examples/gaze_contingent.py` in reading mode: outside seven characters to
 either side of the fixated letter (red dot), letters are replaced by `x`.*
@@ -72,21 +72,21 @@ with `ALREADY_BUSY`. `calibrate()` and `validate()` therefore retry for up to
 eye and raises `NoEyeDetectedError` if there is none.
 
 A runnable version without PsychoPy is in
-[`examples/minimal.py`](examples/minimal.py) (`python examples/minimal.py --help`).
+[`examples/minimal.py`](https://github.com/laubrock-lab/eyelogic-recorder/blob/main/examples/minimal.py) (`python examples/minimal.py --help`).
 
 Examples (all accept `--help`; the PsychoPy ones also `--simulate --windowed`
 to run without a tracker, with the mouse as the eye):
 
-- [`examples/minimal.py`](examples/minimal.py): recording without PsychoPy.
-- [`examples/psychopy_free_viewing.py`](examples/psychopy_free_viewing.py): free viewing of images.
-- [`examples/paragraph_reading.py`](examples/paragraph_reading.py): paragraph reading with a
+- [`examples/minimal.py`](https://github.com/laubrock-lab/eyelogic-recorder/blob/main/examples/minimal.py): recording without PsychoPy.
+- [`examples/psychopy_free_viewing.py`](https://github.com/laubrock-lab/eyelogic-recorder/blob/main/examples/psychopy_free_viewing.py): free viewing of images.
+- [`examples/paragraph_reading.py`](https://github.com/laubrock-lab/eyelogic-recorder/blob/main/examples/paragraph_reading.py): paragraph reading with a
   comprehension question; word AOIs derived from TextBox2 glyph vertices and logged as
   messages; own texts via `--texts` CSV. The built-in texts are the openings of two
   Grimm fairy tales (1857 edition, public domain).
-- [`examples/gaze_contingent.py`](examples/gaze_contingent.py): gaze marker plus a moving window, for
+- [`examples/gaze_contingent.py`](https://github.com/laubrock-lab/eyelogic-recorder/blob/main/examples/gaze_contingent.py): gaze marker plus a moving window, for
   reading (`--mode text`, ±N characters on the fixated line) or scene viewing (`--mode scene`,
   circular window).
-- [`examples/boundary.py`](examples/boundary.py): boundary paradigm for reading, with a fixation check,
+- [`examples/boundary.py`](https://github.com/laubrock-lab/eyelogic-recorder/blob/main/examples/boundary.py): boundary paradigm for reading, with a fixation check,
   the changed sentence pre-rendered so the display change is a pure buffer swap, and
   word AOIs logged as messages (based on an implementation by Philipp Freiherr von Entreß-Fürsteneck).
 
@@ -133,7 +133,7 @@ in the gaze and eye columns.
 
 Use `SysTime` to align samples with messages. `SysTime − ETTime` is not a
 reliable per-sample latency; for measuring gaze-contingent latency see
-[benchmarks/gaze_contingent_latency.md](benchmarks/gaze_contingent_latency.md).
+[benchmarks/gaze_contingent_latency.md](https://github.com/laubrock-lab/eyelogic-recorder/blob/main/benchmarks/gaze_contingent_latency.md).
 
 Validity is per vector (EyeLogic): each eye's point of regard (`x.left`/`y.left`,
 `x.right`/`y.right`), eye position and pupil can be `NA` independently. The
@@ -221,7 +221,7 @@ full chunks go to a writer thread, so disk I/O never delays the SDK callback
 buffers 40 s at 250 Hz by default; if the disk stalls for longer, samples are
 dropped, counted (`samples_dropped`) and reported by `check_health()` as
 `RecordingOverflowError` instead of being lost silently. See
-[docs/recording_pipeline.md](docs/recording_pipeline.md) for details.
+[docs/recording_pipeline.md](https://github.com/laubrock-lab/eyelogic-recorder/blob/main/docs/recording_pipeline.md) for details.
 
 ## Contributors
 
@@ -242,11 +242,11 @@ independently and is not an official EyeLogic product.
 
 ## License
 
-MIT, see [LICENSE](LICENSE).
+MIT, see [LICENSE](https://github.com/laubrock-lab/eyelogic-recorder/blob/main/LICENSE).
 
 ## Citation
 
 Please cite the software via its DOI,
 https://doi.org/10.5281/zenodo.23537087, which resolves to the latest version
 (each version also has its own DOI on Zenodo). Details are in
-[CITATION.cff](CITATION.cff).
+[CITATION.cff](https://github.com/laubrock-lab/eyelogic-recorder/blob/main/CITATION.cff).
