@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=77"]  # SPDX license string; only needed to build, wheels run on 3.8
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eyelogic-recorder"
+version = "0.2.0"
+description = "Lightweight EyeLogic eye-tracker client with asynchronous recording to CSV that never blocks the SDK callback"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["eye tracking", "eye-tracking", "EyeLogic", "PsychoPy", "reading", "gaze-contingent", "psychology"]
+authors = [{ name = "Jochen Laubrock" }]
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+    # One tested SDK version; the EyeLogic server must be at least as new.
+    "eyelogic-sdk==1.2.4; sys_platform == 'win32'",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: Microsoft :: Windows",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+]
+
+[project.urls]
+Homepage = "https://github.com/laubrock-lab/eyelogic-recorder"
+Issues = "https://github.com/laubrock-lab/eyelogic-recorder/issues"
+Changelog = "https://github.com/laubrock-lab/eyelogic-recorder/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+psychopy = ["psychopy"]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

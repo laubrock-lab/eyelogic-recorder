@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "eyelogic-recorder: asynchronous recording for EyeLogic eye trackers in Python"
+type: software
+version: 0.2.0
+date-released: "2026-10-21"
+license: MIT
+repository-code: "https://github.com/laubrock-lab/eyelogic-recorder"
+authors:
+  - family-names: Laubrock
+    given-names: Jochen
+    affiliation: University of Potsdam
+    orcid: "https://orcid.org/0000-0002-0798-8977"
+abstract: >-
+  A lightweight Python client for EyeLogic eye trackers, built on the official
+  EyeLogic SDK. It records every gaze sample asynchronously to plain CSV without
+  ever blocking the SDK callback, writes timestamped messages on the same clock,
+  reports errors as typed exceptions, and includes a simulated tracker, PsychoPy
+  example experiments (boundary paradigm, moving window, paragraph reading,
+  free viewing) and benchmarks.
+keywords:
+  - eye tracking
+  - EyeLogic
+  - PsychoPy
+  - reading
+  - gaze-contingent display
+  - data recording
